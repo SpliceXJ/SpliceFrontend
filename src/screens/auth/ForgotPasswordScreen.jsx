@@ -32,11 +32,15 @@ const ForgotPasswordScreen = () => {
         }
       );
       if (response.status === 404) {
-        setError(Alert.alert("User not found"));
+        Alert.alert(
+          "User not found",
+          "Email is not found, enter an email you once used to reset your password"
+        );
         return;
       }
+
       const data = await response.json();
-      if (data.success) {
+      if (response.status === 200) {
         Alert.alert(
           "Reset Password",
           "An email has been sent to your email address with instructions to reset your password."
