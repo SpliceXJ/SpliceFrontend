@@ -1,5 +1,6 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import ForgotPasswordScreen from "./auth/ForgotPasswordScreen";
+import ResetPasswordScreen from "./auth/ResetPasswordScreen";
 import SigninScreen from "./auth/SigninScreen";
 import SignupScreen from "./auth/SignupScreen";
 import Welcome from "./auth/Welcome";
@@ -17,6 +18,7 @@ export function Screens() {
       <Stack.Screen name="SignUp" component={SignupScreen} />
       <Stack.Screen name="SignIn" component={SigninScreen} />
       <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen} />
+      <Stack.Screen name="ResetPassword" component={ResetPasswordScreen} />
     </Stack.Navigator>
   );
 }
